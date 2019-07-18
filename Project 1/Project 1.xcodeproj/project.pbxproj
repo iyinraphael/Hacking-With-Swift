@@ -23,6 +23,7 @@
 		EB70A3DA22E0B56500544101 /* nssl0049.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB70A3D922E0B56500544101 /* nssl0049.jpg */; };
 		EB70A3DC22E0B56C00544101 /* nssl0051.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB70A3DB22E0B56C00544101 /* nssl0051.jpg */; };
 		EB70A3DE22E0B57100544101 /* nssl0091.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB70A3DD22E0B57100544101 /* nssl0091.jpg */; };
+		EB70A3E022E0C29400544101 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB70A3DF22E0C29400544101 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		EB70A3D922E0B56500544101 /* nssl0049.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0049.jpg; sourceTree = "<group>"; };
 		EB70A3DB22E0B56C00544101 /* nssl0051.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0051.jpg; sourceTree = "<group>"; };
 		EB70A3DD22E0B57100544101 /* nssl0091.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0091.jpg; sourceTree = "<group>"; };
+		EB70A3DF22E0C29400544101 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				EB2B953D22D830D4009D0F79 /* AppDelegate.swift */,
 				EB2B953F22D830D4009D0F79 /* SceneDelegate.swift */,
 				EB2B954122D830D4009D0F79 /* ViewController.swift */,
+				EB70A3DF22E0C29400544101 /* DetailViewController.swift */,
 				EB2B954322D830D4009D0F79 /* Main.storyboard */,
 				EB2B954622D830D8009D0F79 /* Assets.xcassets */,
 				EB70A3CB22E0B52D00544101 /* nssl0033.jpg */,
@@ -181,6 +184,7 @@
 				EB2B954222D830D4009D0F79 /* ViewController.swift in Sources */,
 				EB2B953E22D830D4009D0F79 /* AppDelegate.swift in Sources */,
 				EB2B954022D830D4009D0F79 /* SceneDelegate.swift in Sources */,
+				EB70A3E022E0C29400544101 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
