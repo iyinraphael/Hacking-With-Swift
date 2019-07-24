@@ -15,34 +15,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvT-QC-RvR">
-                                <rect key="frame" x="84" y="100" width="200" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CT2-Mj-Xnw">
+                                <rect key="frame" x="107" y="100" width="200" height="100"/>
+                                <state key="normal" image="us"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JlK-dx-kNv">
-                                <rect key="frame" x="84" y="230" width="200" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4O-Jf-T3i">
+                                <rect key="frame" x="107" y="230" width="200" height="100"/>
+                                <state key="normal" image="us"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huc-yc-GjN">
-                                <rect key="frame" x="84" y="360" width="200" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5q-Ko-oel">
-                                <rect key="frame" x="84" y="100" width="200" height="100"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWI-76-NWn">
+                                <rect key="frame" x="107" y="360" width="200" height="100"/>
+                                <state key="normal" image="us"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Y5q-Ko-oel" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="1e5-Zt-jht"/>
-                            <constraint firstItem="Y5q-Ko-oel" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tpS-Jp-D77"/>
+                            <constraint firstItem="CT2-Mj-Xnw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CZS-nC-JjL"/>
+                            <constraint firstItem="CT2-Mj-Xnw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="Jhz-ET-kdp"/>
+                            <constraint firstItem="J4O-Jf-T3i" firstAttribute="top" secondItem="CT2-Mj-Xnw" secondAttribute="bottom" constant="30" id="RZc-xg-Tdq"/>
+                            <constraint firstItem="J4O-Jf-T3i" firstAttribute="centerX" secondItem="CT2-Mj-Xnw" secondAttribute="centerX" id="TWs-Lo-Ewn"/>
+                            <constraint firstItem="qWI-76-NWn" firstAttribute="centerX" secondItem="CT2-Mj-Xnw" secondAttribute="centerX" id="cEh-Fd-cBh"/>
+                            <constraint firstItem="qWI-76-NWn" firstAttribute="top" secondItem="CT2-Mj-Xnw" secondAttribute="bottom" constant="160" id="hsY-zG-v7S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="nnG-3c-Ulj"/>
+                    <connections>
+                        <outlet property="button1" destination="CT2-Mj-Xnw" id="a4S-VH-dOH"/>
+                        <outlet property="button2" destination="J4O-Jf-T3i" id="kNj-JS-CkJ"/>
+                        <outlet property="button3" destination="qWI-76-NWn" id="2cL-A0-Cq7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,4 +69,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="us" width="200" height="100"/>
+    </resources>
 </document>
