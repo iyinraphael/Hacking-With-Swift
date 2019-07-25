@@ -46,6 +46,9 @@ class ViewController: UIViewController {
     }
 
     func askQuestioln() {
+        
+        countries.shuffle()
+        
         button1.setImage(UIImage(named: countries[0]), for: .normal)
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
