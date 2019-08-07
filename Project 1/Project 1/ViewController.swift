@@ -17,6 +17,7 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.title = "Storm Viewer"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareApp))
 
         
         let fm = FileManager.default
@@ -34,6 +35,14 @@ class ViewController: UITableViewController {
         print(pictures)
     }
     
+    @objc func shareApp() {
+        let share = "Download Strom Viewer to experience amazing Natural disaster images"
+        
+        let av = UIActivityViewController(activityItems: [share], applicationActivities: [])
+        av.popoverPresentationController?.sourceView = self.view
+        present(av, animated: true)
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pictures.count
     }
@@ -49,8 +58,6 @@ class ViewController: UITableViewController {
             
             vc.selectedImage = pictures[indexPath.row]
             vc.count = indexPath.row
-            
-
             
             navigationController?.pushViewController(vc, animated: true)
         }
