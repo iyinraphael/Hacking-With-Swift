@@ -49,6 +49,7 @@ class ViewController: UITableViewController {
             
             vc.selectedImage = pictures[indexPath.row]
             vc.count = indexPath.row
+            
 
             
             navigationController?.pushViewController(vc, animated: true)
