@@ -11,11 +11,13 @@ import UIKit
 class ViewController: UITableViewController {
 
     var pictures = [String]()
+    var imageView: UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = "Storm Viewer"
+
         
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
@@ -31,7 +33,7 @@ class ViewController: UITableViewController {
         pictures.sort()
         print(pictures)
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pictures.count
     }
