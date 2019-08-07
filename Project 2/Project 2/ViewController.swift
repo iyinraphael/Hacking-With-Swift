@@ -20,7 +20,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareScore))
+        
         countries += [
             "estonia",
             "france",
@@ -74,7 +76,18 @@ class ViewController: UIViewController {
         let ac = UIAlertController(title: self.title, message: "Your score is \(score)", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Continue", style: .default, handler: askQuestion))
         present(ac, animated: true, completion: nil)
+    
+    }
+    
+    @objc func  shareScore() {
+        var score = "My score is \(self.score)."
+        if self.score > 4 {
+            score += " Great job!"
+        }
         
+        let av = UIActivityViewController(activityItems: [score], applicationActivities: [])
+        av.popoverPresentationController?.sourceView = self.view
+        present(av, animated: true)
     }
     
 }
