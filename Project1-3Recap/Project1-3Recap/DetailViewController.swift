@@ -18,6 +18,8 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         updateView()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareFlag))
     }
     
     func updateView() {
@@ -25,6 +27,17 @@ class DetailViewController: UIViewController {
             let image = UIImage(named: country)
             imageView.image = image
         }
+    }
+    
+    @objc func shareFlag() {
+        if let country = country {
+            let image = UIImage(named: country)
+            
+            let av = UIActivityViewController(activityItems: [image], applicationActivities: [])
+            present(av, animated: true)
+        }
+        
+       
     }
 
 }
