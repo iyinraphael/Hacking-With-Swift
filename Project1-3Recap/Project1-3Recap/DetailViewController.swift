@@ -29,6 +29,7 @@ class DetailViewController: UIViewController {
         }
     }
     
+    //UIActivityViewController is for sharing stuff to other apps like facebook twitter or saving stuffs from app to media
     @objc func shareFlag() {
         if let country = country {
             let image = UIImage(named: country)
