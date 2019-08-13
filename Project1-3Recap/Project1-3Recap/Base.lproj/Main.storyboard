@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ixU-he-0BF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14790.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="CNg-am-eOj">
+            <objects>
+                <viewController storyboardIdentifier="DetailView" id="qQW-p1-5zm" customClass="DetailViewController" customModule="Project1_3Recap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rew-pU-kkn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bN6-I1-azL">
+                                <rect key="frame" x="20" y="127" width="374" height="300"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bN6-I1-azL" firstAttribute="top" secondItem="GQS-CQ-NTE" secondAttribute="top" constant="83" id="639-En-2Oo"/>
+                            <constraint firstItem="bN6-I1-azL" firstAttribute="leading" secondItem="GQS-CQ-NTE" secondAttribute="leading" constant="20" id="MX3-9O-Bzr"/>
+                            <constraint firstItem="bN6-I1-azL" firstAttribute="centerX" secondItem="GQS-CQ-NTE" secondAttribute="centerX" id="Q76-ma-3a9"/>
+                            <constraint firstItem="GQS-CQ-NTE" firstAttribute="bottom" secondItem="bN6-I1-azL" secondAttribute="bottom" constant="435" id="mm7-GR-Fx7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GQS-CQ-NTE"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="bN6-I1-azL" id="6vV-7n-eCx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eS8-jF-pVg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2871.0144927536235" y="138.61607142857142"/>
+        </scene>
+        <!--Countries-->
+        <scene sceneID="6RK-gf-JNz">
+            <objects>
+                <tableViewController id="NA9-t4-HAf" customClass="ViewController" customModule="Project1_3Recap" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Hf6-JE-uqE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="countries" textLabel="xsq-Mb-PIC" rowHeight="98" style="IBUITableViewCellStyleDefault" id="kch-Ml-0oZ">
+                                <rect key="frame" x="0.0" y="28" width="414" height="98"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kch-Ml-0oZ" id="i04-Ou-RDJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="98"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xsq-Mb-PIC">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="98"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <color key="textColor" red="0.2121530697" green="0.39077813430000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="NA9-t4-HAf" id="sI9-UN-PVE"/>
+                            <outlet property="delegate" destination="NA9-t4-HAf" id="9fX-Cw-yQ2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Countries" id="4Rv-1Q-zrD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83s-ZS-z0y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1889.8550724637682" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jW7-ez-jfD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ixU-he-0BF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="ff3-Zd-uyw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NA9-t4-HAf" kind="relationship" relationship="rootViewController" id="Lgy-hn-DK5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EKt-tb-T5c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979.71014492753636" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
