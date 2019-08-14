@@ -13,6 +13,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
     //MARK: - Property
     var webView: WKWebView!
+    var progressView: UIProgressView!
     
     override func loadView() {
         webView = WKWebView()
@@ -26,11 +27,21 @@ class ViewController: UIViewController, WKNavigationDelegate {
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
         
+        //Key Value Observation (KVO)
+        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: self, action: #selector(openTapped))
+        
+        //UIProgressView
+        progressView = UIProgressView(progressViewStyle: .default)
+        progressView.sizeToFit()
+        let progressButton = UIBarButtonItem(customView: progressView)
+        
+        //UIToolBar
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
         
-        toolbarItems = [spacer, refresh]
+        toolbarItems = [ progressButton, spacer, refresh]
         navigationController?.isToolbarHidden = false
     }
 
@@ -53,6 +64,12 @@ class ViewController: UIViewController, WKNavigationDelegate {
         title = webView.title
     }
     
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "estimatedProgress" {
+            //estimatedProgress is a Double
+            progressView.progress = Float(webView.estimatedProgress)
+        }
+    }
     
 }
 
