@@ -10,11 +10,29 @@ import UIKit
 
 class ViewController: UITableViewController {
 
+    var allWords = [String]()
+    var useWords = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
+            if let startWords = try? String(contentsOf: startWordsURL) {
+                allWords = startWords.components(separatedBy: "\n")
+            }
+        }
+        
+        if allWords.isEmpty {
+            allWords = ["silkworm"]
+        }
+        
+        startGame()
     }
 
-
+    func startGame() {
+        title = allWords.randomElement()
+        useWords.removeAll(keepingCapacity: true)
+        tableView.reloadData()
+    }
 }
 
