@@ -60,7 +60,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nnG-3c-Ulj"/>
+                    <navigationItem key="navigationItem" id="nnG-3c-Ulj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="JWy-27-zMi">
+                            <connections>
+                                <action selector="View:" destination="BYZ-38-t0r" id="P3t-tE-umv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="button1" destination="CT2-Mj-Xnw" id="a4S-VH-dOH"/>
                         <outlet property="button2" destination="J4O-Jf-T3i" id="kNj-JS-CkJ"/>
@@ -70,6 +76,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="R9B-q7-hbk">
+            <objects>
+                <viewController id="W5s-bX-UBu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V5v-c4-19o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="JkQ-ew-Hpp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yfd-36-ILG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nt3-wz-gV5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1775" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fkc-kI-pM4">

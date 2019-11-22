@@ -14,6 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
     
+    @IBAction func View(_ sender: Any) {
+        let vc = LayoutViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
+    
     var countries = [String]()
     var correctAnswer = 0
     var score = 0

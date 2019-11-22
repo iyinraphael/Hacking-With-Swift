@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB4B9DCD23889166003D2053 /* LayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4B9DCC23889166003D2053 /* LayoutViewController.swift */; };
 		EBEB866122E80DC8005266C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEB866022E80DC8005266C3 /* SceneDelegate.swift */; };
 		EBFC6E5422E7F83200B6E853 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC6E5322E7F83200B6E853 /* AppDelegate.swift */; };
 		EBFC6E5822E7F83200B6E853 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFC6E5722E7F83200B6E853 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB4B9DCC23889166003D2053 /* LayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutViewController.swift; sourceTree = "<group>"; };
 		EBEB866022E80DC8005266C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = "../../Project 1/Project 1/SceneDelegate.swift"; sourceTree = "<group>"; };
 		EBFC6E5022E7F83200B6E853 /* Project 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBFC6E5322E7F83200B6E853 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				EBFC6E5C22E7F83700B6E853 /* Assets.xcassets */,
 				EBFC6E5E22E7F83700B6E853 /* LaunchScreen.storyboard */,
 				EBFC6E6122E7F83700B6E853 /* Info.plist */,
+				EB4B9DCC23889166003D2053 /* LayoutViewController.swift */,
 			);
 			path = "Project 2";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				EBFC6E5822E7F83200B6E853 /* ViewController.swift in Sources */,
 				EBFC6E5422E7F83200B6E853 /* AppDelegate.swift in Sources */,
+				EB4B9DCD23889166003D2053 /* LayoutViewController.swift in Sources */,
 				EBEB866122E80DC8005266C3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
