@@ -25,6 +25,7 @@ class ViewController: UITableViewController {
         }
     }
     
+    //MARK: - UITABLEVIEW DATASOURCE AND DELEGATE
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return petitions.count
     }
@@ -36,6 +37,14 @@ class ViewController: UITableViewController {
         cell.detailTextLabel?.text = petition.body
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        vc.detailItem = petitions[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    //MARK: - PARSING JSON WITH DECODABLE
     //JSON: JavaScript Object Notation
     func parse(json: Data) {
         let decoder = JSONDecoder()
