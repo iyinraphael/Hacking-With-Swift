@@ -26,9 +26,11 @@ class ViewController: UITableViewController {
         if let url = URL(string: urlString) {
             if let data = try? Data(contentsOf: url) {
                 parse(json: data)
+                return
             }
         
         }
+        showError()
     }
     
     //MARK: - UITABLEVIEW DATASOURCE AND DELEGATE
@@ -60,6 +62,12 @@ class ViewController: UITableViewController {
             petitions = jsonPetitions.results
             tableView.reloadData()
         }
+    }
+    
+    func showError() {
+        let ac = UIAlertController(title: "Loadinf error", message: "There was a problem loading the feed; please check your connection and try again later!", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        present(ac, animated: true)
     }
     
 }
