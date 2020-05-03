@@ -16,13 +16,13 @@ class ViewController: UIViewController {
     var answersLabel: UILabel!
     var currentAnswer: UITextField!
     var letterButtons = [UIButton]()
+    var activatedButtons = [UIButton]()
+    
+    var solutions = [String]()
+    var score = 0
+    var level = 1
 
     //MARK: - Views
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-    
     override func loadView() {
         view = UIView()
         view.backgroundColor = .white
@@ -60,6 +60,7 @@ class ViewController: UIViewController {
         
         //Note: We don't need to store those a properties on the view controller, because we don't need to adjest them later
         let submitButton = UIButton(type: .system)
+        submitButton.addTarget(self, action: #selector(submitTapped), for: .touchUpInside)
         submitButton.translatesAutoresizingMaskIntoConstraints = false
         submitButton.setTitle("SUBMIT", for: .normal)
         view.addSubview(submitButton)
@@ -132,6 +133,20 @@ class ViewController: UIViewController {
         }
     }
     
+    override func viewDidLoad() {
+           super.viewDidLoad()
+
+       }
+    
+    @objc func letterTapped(_ sender: UIButton) {
+        
+    }
+    @objc func submitTapped(_ sender: UIButton) {
+        
+    }
+    @objc func clearTapped(_ sender: UIButton) {
+        
+    }
     
 
 }
