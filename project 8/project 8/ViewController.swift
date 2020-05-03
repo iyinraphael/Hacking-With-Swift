@@ -66,6 +66,7 @@ class ViewController: UIViewController {
         view.addSubview(submitButton)
         
         let clearButton = UIButton(type: .system)
+        clearButton.addTarget(self, action: #selector(clearTapped), for: .touchUpInside)
         clearButton.translatesAutoresizingMaskIntoConstraints = false
         clearButton.setTitle("CLEAR", for: .normal)
         view.addSubview(clearButton)
@@ -115,6 +116,7 @@ class ViewController: UIViewController {
             for col in 0..<5 {
                 // create a new button and give it a big font size
                 let letterButton = UIButton(type: .system)
+                letterButton.addTarget(self, action: #selector(letterTapped), for: .touchUpInside)
                 letterButton.titleLabel?.font = UIFont.systemFont(ofSize: 36)
 
                 // give the button some temporary text so we can see it on-screen
@@ -148,6 +150,43 @@ class ViewController: UIViewController {
         
     }
     
+    func loadLevel() {
+        var clueString = ""
+        var solutionString = ""
+        var letterBits = [String]()
+        
+        if let levelFileURL = Bundle.main.url(forResource: "Level\(level)", withExtension: "txt") {
+            if let levelContents = try? String(contentsOf: levelFileURL) {
+                var lines = levelContents.components(separatedBy: "\n")
+                lines.shuffle()
+                
+                for (index, line) in lines.enumerated() {
+                    let parts = line.components(separatedBy: ": ")
+                    let answer = parts[0]
+                    let clue = parts[1]
+                    
+                    clueString += "\(index + 1). \(clue)\n"
+                    
+                    let solutionWord = answer.replacingOccurrences(of: "|", with: "")
+                    solutionString += "\(solutionWord.count) letters\n"
+                    solutions.append(solutionWord)
+                    
+                    let bits = answer.components(separatedBy: "|")
+                    letterBits += bits
+                }
+            }
+        }
+        cluesLabel.text = clueString.trimmingCharacters(in: .whitespacesAndNewlines)
+        answersLabel.text = solutionString.trimmingCharacters(in: .whitespacesAndNewlines)
 
+        letterBits.shuffle()
+
+        if letterBits.count == letterButtons.count {
+            for i in 0 ..< letterButtons.count {
+                letterButtons[i].setTitle(letterBits[i], for: .normal)
+            }
+        }
+
+    }
 }
 

@@ -13,7 +13,8 @@
 		EB584FB6245BB752003FBEEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB584FB4245BB752003FBEEC /* Main.storyboard */; };
 		EB584FB8245BB755003FBEEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB584FB7245BB755003FBEEC /* Assets.xcassets */; };
 		EB584FBB245BB755003FBEEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB584FB9245BB755003FBEEC /* LaunchScreen.storyboard */; };
-		EB7CE564245F714A00BF80AB /* text1.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7CE563245F714A00BF80AB /* text1.txt */; };
+		EB7CE564245F714A00BF80AB /* Level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7CE563245F714A00BF80AB /* Level1.txt */; };
+		EB7CE566245F766100BF80AB /* Level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = EB7CE565245F766100BF80AB /* Level2.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +26,8 @@
 		EB584FB7245BB755003FBEEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB584FBA245BB755003FBEEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB584FBC245BB755003FBEEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB7CE563245F714A00BF80AB /* text1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text1.txt; sourceTree = "<group>"; };
+		EB7CE563245F714A00BF80AB /* Level1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Level1.txt; sourceTree = "<group>"; };
+		EB7CE565245F766100BF80AB /* Level2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Level2.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +44,8 @@
 		EB584FA2245BB752003FBEEC = {
 			isa = PBXGroup;
 			children = (
-				EB7CE563245F714A00BF80AB /* text1.txt */,
+				EB7CE565245F766100BF80AB /* Level2.txt */,
+				EB7CE563245F714A00BF80AB /* Level1.txt */,
 				EB584FAD245BB752003FBEEC /* project 8 */,
 				EB584FAC245BB752003FBEEC /* Products */,
 			);
@@ -129,9 +132,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB584FBB245BB755003FBEEC /* LaunchScreen.storyboard in Resources */,
-				EB7CE564245F714A00BF80AB /* text1.txt in Resources */,
+				EB7CE564245F714A00BF80AB /* Level1.txt in Resources */,
 				EB584FB8245BB755003FBEEC /* Assets.xcassets in Resources */,
 				EB584FB6245BB752003FBEEC /* Main.storyboard in Resources */,
+				EB7CE566245F766100BF80AB /* Level2.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
